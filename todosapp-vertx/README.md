@@ -4,8 +4,6 @@ todosapp in Vert.x
 Implements todosapp using the server-side asynchronous processing in [Vert.x](http://vertx.io/)
 
 
-###Applications
-
 ####Homepage
   http://localhost:8080
 
