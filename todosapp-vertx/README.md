@@ -17,7 +17,7 @@ The application is rendered at the server side
 
 ####RESTful Web Service
 - URL: `http://localhost:8080/api/todos`
-- Technology: [Yoke](http://pmlopes.github.io/yoke/), [vert-spring-data](https://github.com/relai/vertx-spring-data)
+- Technology: [Yoke](http://pmlopes.github.io/yoke/), [vertx-spring-data](https://github.com/relai/vertx-spring-data)
 
 ####Single Ppage Application (spa)
 A rich Internet client rendered at the browser side
