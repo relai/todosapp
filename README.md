@@ -18,28 +18,28 @@ Once running, the web application can be accessed at its **homepage**
     
      http://localhost:8080
  
-There are actually three "applications" packaged in each sub-project.
+There are actually three "applications" packaged in each sub-project:
 
-**Web application** rendered at the server side:
+- **Web application** rendered at the server side:
 
     http://localhost:8080/todos
 
 
-**RESTful Web Service** providing CRUD operations of to-do items:
+- **RESTful Web Service** providing CRUD operations of to-do items:
 
     http://localhost:8080/api/todos
 
 
-**Single-page application**: a rich Internet client rendered at the browser side:
+- **Single-page application**: a rich Internet client rendered at the browser side:
 
     http://localhost:8080/spa
    
-This is a Backbone.js application backed by the RESTful web service at `api/todos`.
+    This is a Backbone.js application backed by the RESTful web service at `api/todos`.
 
 
 ### Java 8
 
-All modules are implemented in Java 8, taking advantage of Lambda expressions.
+All modules are implemented in Java 8, taking advantage of the Lambda expressions.
 
 
 ###Maven Integration
