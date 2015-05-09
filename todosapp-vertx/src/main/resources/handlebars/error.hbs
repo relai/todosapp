@@ -1,0 +1,31 @@
+{{# partial "pageScript"}}
+ 
+{{/partial}}
+
+ 
+{{# partial "navigationBarActions" }}
+    <a title="Back" class="element" href="/todos"> <span
+        class="icon-arrow-left on-left"></span><span>back</span>
+    </a>	
+{{/partial}}
+
+
+{{# partial "mainBody" }}
+    <h1>
+        <i class="icon-bug fg-darker smaller"></i>
+        Oops
+    </h1>
+
+    <p class="padding20 margin20"> {{message}} Click back button to reload.
+    <!--
+        Failed URL: {{url}}
+        {{#if exception}}
+            Exception:  {{exception.message}}
+            {{#each  exception.stackTrace }}    
+              {{this}}
+            {{/each}}
+        {{/if}}
+    -->
+{{/partial}}
+
+{{> layout}}

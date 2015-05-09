@@ -1,0 +1,48 @@
+@(filter: String, todos: List[TodoItem])
+
+@pageScript = {
+      <script src="/webjars/todosapp/static/js/todo-list.js"></script>
+}
+
+@navigationBarActions = {
+    <a title="create a new to-do todo" class="element" href="/todos/create"> 
+            <span class="icon-plus-2 on-left"></span><span>new todo</span>
+    </a>
+}
+
+
+@main("to-do list")(pageScript)(navigationBarActions){
+    <div id="controlSection" class="grid pos-rel">
+        <h1> 
+            <i class="icon-clipboard-2 smaller"></i> to-do<small class="on-right">list</small>
+        </h1>
+
+        <div class="button-set place-bottom-right" data-role="button-group" id="filterButtons">
+            <span class="place-left on-left-more icon-arrow-right-3" style="margin-top: 5px"></span>
+            <button id="all" @if(filter=="all"){class=active} 
+               title="view all todos"> all </button>
+            <button id="open" @if(filter=="open"){class=active} 
+               title="view only open todos"> open </button>
+            <button id="done" @if(filter=="done"){class=active} 
+               title="view only done todos" > done </button>           
+        </div>
+    </div>
+    <table class="table hovered">
+        <thead>
+            <tr>
+                <th class="text-left span1" style="border-bottom: 1px solid #111;">Done</th>
+                <th class="text-left span8" style="border-bottom: 1px solid #111;">Name</th>
+                <th class="text-left span3" style="border-bottom: 1px solid #111;">Priority</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(todo <- todos) {
+                <tr>
+                   <td> <i class="icon-checkbox@if(!todo.getCompleted){-unchecked} fg-grayLight"></i> </td>                       
+                   <td> @if(todo.getId != 0){<a href="/todos/@todo.getId">@todo.getName</a>} else {@todo.getName}  </td>
+                   <td> @todo.getPriority </td>
+                </tr>
+           }    
+        </tbody>
+    </table>
+}

@@ -1,0 +1,11 @@
+{
+  "main":"sample.todosapp.vertx.TodoApp",
+  
+  "includes": "com.jetdrone~yoke~2.0.8,com.github.relai.vertx.springdata~mod-spring-data~0.5",
+
+  "description":"vert.x starter sample: todosapp",
+  "licenses": ["The Apache Software License Version 2.0"],
+  "author": "Re Lai",
+  "keywords": ["todosapp", "todomvc", "sample", "starter", "REST"],
+  "homepage": "https://github.com/relai/vertx-starters"
+}

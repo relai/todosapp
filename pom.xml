@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>sample.todosapp</groupId>
+    <artifactId>parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>Todosapp</name>
+    <url>https://github.com/relai/todosapp</url>
+    <description>
+        Todosapp is a series of sample applications that manages your to-do items,  
+        primarily to survey asysnchronous programming in JVM web frameworks.
+    </description>
+
+    <modules>
+          <module>todosapp-sharedresources</module>
+          <module>todosapp-javaee</module>
+          <module>todosapp-spring</module>
+          <module>todosapp-vertx</module>
+          <module>todosapp-play</module>
+    </modules>  
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <spring.boot.version>1.1.5.RELEASE</spring.boot.version>
+        <maven.war.plugin.version>2.4</maven.war.plugin.version>
+        <maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+    </properties>
+  
+    <build>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <version>${maven.compiler.plugin.version}</version>
+              <configuration>
+                  <source>1.8</source>
+                  <target>1.8</target>
+              </configuration>
+          </plugin>
+      </plugins>
+    </build>
+    
+</project>

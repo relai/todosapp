@@ -1,0 +1,63 @@
+@(todo: TodoItem)
+
+@pageScript = {
+      <script src="/webjars/todosapp/static/js/todo-form.js"></script>
+}
+
+@navigationBarActions = {
+    <a title="Save" class="element" href="#" id="save"> <span
+        class="icon-checkmark on-left"></span><span>save</span>
+    </a> 			
+    <a title="Cancel" class="element" href="/todos"> <span
+        class="icon-undo on-left"></span><span>cancel</span>
+    </a>
+
+    @if(todo.getId() != 0L){
+        <form id="deleteForm" method="POST">
+            <input type="hidden" name="action" value="delete" />
+        </form>    
+        <a title="Delete" class="element" href="#" id="delete"> <span
+            class="icon-cancel-2 on-left"></span><span>delete</span>
+        </a> 
+    }
+}
+
+@main("to-do item")(pageScript)(navigationBarActions){
+    <h1>
+        <a href="list.html"><i class="icon-clipboard fg-darker smaller"></i>
+        </a>to-do<small class="on-right">item</small>
+    </h1>
+
+    <form class="span10" id="todoForm" method="POST">
+        <input type="hidden" name="action" value="save" />
+        <input type="hidden" name="id" value="@todo.getId" />
+        <input type="hidden" name="version" value="@todo.getVersion" />
+        <label>Name <span class="fg-red" id="nameMessage"></span></label>
+        <div class="input-control text" data-role="input-control" id="nameControl">
+            <input type="text" placeholder="todo name" id="name" name="name" value="@todo.getName"></input>
+            <button class="btn-clear" tabindex="-1" type="button"></button>			
+        </div>
+
+        <label>Description</label>
+        <div class="input-control textarea" data-role="input-control">
+            <textarea name="description">@todo.getDescription</textarea>
+        </div>
+
+        <label>Priority</label>
+        <div class="input-control select">
+            <select name="priority">
+                <option value="">  </option>
+                <option value="High"   @if(todo.getPriority == "High")   {selected}>High</option>
+                <option value="Normal" @if(todo.getPriority ==  "Normal"){selected}>Normal</option>
+                <option value="Low"    @if(todo.getPriority ==  "Low")   {selected}>Low</option>
+            </select>
+        </div>
+
+        <label class="nbm">Done</label>
+        <div class="input-control checkbox" data-role="input-control">
+            <label> <input type="checkbox" name="completed" @(todo.getCompleted){checked}/> <span class="check"></span>
+            </label>
+        </div>
+
+    </form>
+}

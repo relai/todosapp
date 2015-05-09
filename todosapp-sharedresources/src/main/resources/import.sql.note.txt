@@ -1,0 +1,14 @@
+Note for import.sql
+
+File import.sql contains sample data to populate the database for todosapp.
+
+[EclipseLink]
+
+EclipseLink loads the file due to the jpa property in persistence.xml:
+   <property name="javax.persistence.sql-load-script-source" value="import.sql" /> 
+
+
+[Hibernate]
+
+Hibernate is hard-coded to load this file when hbm2ddl.auto is set to create or create-drop in persistence.xml.
+    <property name="hibernate.hbm2ddl.auto" value="create"/>

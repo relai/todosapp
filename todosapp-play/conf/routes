@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET      /                           controllers.WebJarAssets.at(file="todosapp/index.html")    
+GET      /spa                        controllers.WebJarAssets.at(file="todosapp/backbone-spa/spa.html")
+
+# Server-rendered web application
+GET      /todos                      controllers.TodoWebApp.list(filter: String ?= "all")
+GET      /todos/create               controllers.TodoWebApp.form(id: Long = 0)
+GET      /todos/:id                  controllers.TodoWebApp.form(id: Long)
+POST     /todos/:path                controllers.TodoWebApp.postForm(path)
+
+# REST web service
+GET     /api/todos                 controllers.TodoRestApp.findAll
+GET     /api/todos/:id             controllers.TodoRestApp.findOne(id: Long)
+POST    /api/todos                 controllers.TodoRestApp.create
+PUT     /api/todos/:id             controllers.TodoRestApp.update(id: Long)
+DELETE  /api/todos/:id             controllers.TodoRestApp.delete(id: Long)
+
+# Static web resources from webjars
+GET     /webjars/*file               controllers.WebJarAssets.at(file)

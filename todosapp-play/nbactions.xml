@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>org.codehaus.mojo:exec-maven-plugin:1.2.1:exec</goal>
+            </goals>
+            <properties>
+                <exec.executable>activator.bat</exec.executable>
+                <exec.args>"-jvm-debug run 8080"</exec.args>
+            </properties>
+        </action>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>exec:exec</goal>
+            </goals>
+            <properties>
+                <exec.executable>activator.bat</exec.executable>
+                <exec.args>"run 8080"</exec.args>         
+            </properties>
+        </action>       
+    </actions>
