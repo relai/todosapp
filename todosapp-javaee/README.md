@@ -6,25 +6,31 @@ Implementing todosapp in Java EE using the server-side asynchronous processing.
 
 ###Applications
 
-The web application can be accessed in a web browser at its home page 
-    http://localhost:8080
+The web application can be accessed in a web browser at its **homepage** 
+
+      http://localhost:8080
+      
 To change the port number, modify pom.xml.
 
-There  are three applications packaged together in the project.
+There are three "applications" packaged together in the project.
 
-*Web application* rendered at the server side
--URL: `http://localhost:8080/todos`
--Technology: asynchronous Servlet 
--UI template: JSP
+####Web application
+The application is rendered at the server side:
 
-*Rest Web Service*
--URL: `http://localhost:8080/api/todos`
--Technology: asynchronous Jersey (JAX-RS) 
+- URL: `http://localhost:8080/todos`
+- Technology: *asynchronous* Servlet 
+- UI template: JSP
 
-*Single-page application*: a rich Internet client rendered at the browser side
--URL: `http://localhost:8080/spa`
--Technology: Backbone.js on top of the Rest web service 
--UI template: handlebars (at the browser side)
+####Rest Web Service
+- URL: `http://localhost:8080/api/todos`
+- Technology: asynchronous Jersey (JAX-RS) 
+
+####Single-page application (spa)
+A rich Internet client rendered at the browser side.
+
+- URL: `http://localhost:8080/spa`
+- Technology: Backbone.js on top of the Rest web service 
+- UI template: handlebars (at the browser side)
 
 ###ORM
 
