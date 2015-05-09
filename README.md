@@ -54,7 +54,9 @@ To build all sub-projects, run
 Each application can be deployed and run on its embedded application server with an in-memory database directly from Maven. 
 Refer to the instruction in each project for how to run the application.
 
-### NetBeans Integration
+### IDE and NetBeans
 
-If you open the module as a Maven project in NetBeans, you can leverage NetBeans integration with Maven to run NetBeans command Clean, Build, Run and Debug in each sub-project.
+The project is built using Maven. You can open it in any of your favorite IDE.
+
+If you open the module as a Maven project in NetBeans, you can leverage NetBeans integration with Maven to run NetBeans command Clean, Build, Run and Debug.
 
