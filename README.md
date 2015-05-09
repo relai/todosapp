@@ -14,21 +14,26 @@ In the sub-projects, we build the sample project using the following frameworks 
 
 ### Applications
 
-Once running, the web application can be accessed at its homepage
-    http://localhost:8080
+Once running, the web application can be accessed at its **homepage**
+    
+     http://localhost:8080
  
 There are actually three "applications" packaged in each sub-project.
 
-*Web application* rendered at the server side
+**Web application** rendered at the server side:
+
     http://localhost:8080/todos
 
 
-*RESTful Web Service* providing CRUD operations of to-do items.
+**RESTful Web Service** providing CRUD operations of to-do items:
+
     http://localhost:8080/api/todos
 
 
-*Single-page application*: a rich Internet client rendered at the browser side
-   http://localhost:8080/spa
+**Single-page application**: a rich Internet client rendered at the browser side:
+
+    http://localhost:8080/spa
+   
 This is a Backbone.js application backed by the RESTful web service at `api/todos`.
 
 
@@ -43,9 +48,10 @@ The build system is Maven. Maven 3.2.2 or newer should be used.
 Older versions of Maven can result in CDI linkage errors.
 
 To build all sub-projects, run
+
     mvn clean install
 
-Each application can be deployed and run on its embedded application server and embedded database directly from Maven. 
+Each application can be deployed and run on its embedded application server with an in-memory database directly from Maven. 
 Refer to the instruction in each project for how to run the application.
 
 ### NetBeans Integration
