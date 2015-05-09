@@ -1,8 +1,8 @@
 todosapp 
 ========
 
-'todosapp' is a sample application that manages your to-do items. It is built primarily to explore the server-side asynchronous programming in JVM web frameworks.
-It is inspired by [todomvc](http://todomvc.com/), which showcases numerous MV* JavaScript frameworks at the browser side.
+`todosapp` is a sample application that manages your to-do items. It is built primarily to explore the server-side asynchronous programming in JVM web frameworks.
+It is inspired by [todomvc](http://todomvc.com/), showcasing MV* JavaScript frameworks at the browser side.
 
 ### JVM Web Frameworks
 In the sub-projects, we build the sample project using the following frameworks respectively:
