@@ -1,32 +1,32 @@
 todosapp in Play 2 Framework for Java
 ======================================
 
-Implements todosapp using the server-side asynchronous processing in [Play](https://www.playframework.com/)
+Implements todosapp using the server-side asynchronous processing in [Play](https://www.playframework.com/).
 
-## Versions
 The sample application was developed in
-   Play Framework: 2.3.8
-   Scala: 2.11.1
+   - Play Framework: 2.3.8
+   - Scala: 2.11.1
 
-###Applications
-*Homepage*
+####Homepage
     http://localhost:8080
 
-There are actually three "applications" packaged in the project.
+There are actually three "applications" packaged in the project:
 
-*Web application* rendered at the server side
--URL: `http://localhost:8080/todos`
--Technology: Play 2 
--UI template: Scala templates
+####Web Application
+The application is rendered at the server side.
+- URL: `http://localhost:8080/todos`
+- Technology: Play 2 
+- UI template: Scala templates
 
-*RESTful Web Service*
--URL: `http://localhost:8080/api/todos`
--Technology: Play 2
+####RESTful Web Service
+- URL: `http://localhost:8080/api/todos`
+- Technology: Play 2
 
-*Single-page application*: a rich Internet client rendered at the browser side
--URL: `http://localhost:8080/spa`
--Technology: Backbone.js on top of the above REST web service 
--UI template: handlebars (at the browser side)
+####Single Page Application
+A rich Internet client application rendered at the browser side.
+- URL: `http://localhost:8080/spa`
+- Technology: Backbone.js on top of the above REST web service 
+- UI template: handlebars (at the browser side)
 
 ###ORM
 
@@ -45,17 +45,19 @@ Briefly,
 
 Integration of  build with Maven is achieved with the help of exec-maven-plugin.
 
-To build the project
+To build the project 
+
     mvn clean install
 
-To run the application, 
+To run the application 
+
      mvn exec:exec -Dexec.executable=activator.bat -Dexec.args="run 8080"
 
-###Special Note NetBeans
+###Special Note on NetBeans Integration
 
 If you open the module as a Maven project in NetBeans, you can run NetBeans command Clean, Build, Run and Debug, leveraging NetBeans integration with Maven.
 
-Note that when you run Debug, it only runs the application with remote debugging enabled. Afterwards, you need to attach NetBeans by remote debuggin at port 9999.
+Note that when you run Debug in this module, it only runs the application with remote debugging enabled. Afterwards, you need to attach NetBeans by remote debuggin at port 9999.
 
 
 
