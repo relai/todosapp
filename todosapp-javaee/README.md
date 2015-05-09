@@ -14,23 +14,19 @@ To change the port number, modify pom.xml.
 
 There are three "applications" packaged together in the project.
 
-####Web application
-The application is rendered at the server side:
+- **Web application** rendered at the server side.
+  - URL: `http://localhost:8080/todos`
+  - Technology: *asynchronous* Servlet 
+  - UI template: JSP
 
-- URL: `http://localhost:8080/todos`
-- Technology: *asynchronous* Servlet 
-- UI template: JSP
+- **Rest Web Service**
+  - URL: `http://localhost:8080/api/todos`
+  - Technology: asynchronous Jersey (JAX-RS) 
 
-####Rest Web Service
-- URL: `http://localhost:8080/api/todos`
-- Technology: asynchronous Jersey (JAX-RS) 
-
-####Single-page application (spa)
-A rich Internet client rendered at the browser side.
-
-- URL: `http://localhost:8080/spa`
-- Technology: Backbone.js on top of the Rest web service 
-- UI template: handlebars (at the browser side)
+- **Single Page Application** (spa), a rich Internet client rendered at the browser side.
+  - URL: `http://localhost:8080/spa`
+  - Technology: Backbone.js on top of the Rest web service 
+  - UI template: handlebars (at the browser side)
 
 ###ORM
 
