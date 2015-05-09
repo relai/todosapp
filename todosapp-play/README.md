@@ -7,26 +7,27 @@ The sample application was developed in
    - Play Framework: 2.3.8
    - Scala: 2.11.1
 
-####Homepage
-    http://localhost:8080
+###Applications
 
-There are actually three "applications" packaged in the project:
+The web application can be accessed in a web browser at its **homepage** 
 
-####Web Application
-The application is rendered at the server side.
-- URL: `http://localhost:8080/todos`
-- Technology: Play 2 
-- UI template: Scala templates
+      http://localhost:8080
+      
+There are three "applications" packaged together in the project.
 
-####RESTful Web Service
-- URL: `http://localhost:8080/api/todos`
-- Technology: Play 2
+- **Web application** rendered at the server side.
+  - URL: `http://localhost:8080/todos`
+  - Technology: Play 2 
+  - UI template: Scala templates
+ 
+- **Rest Web Service**
+  - URL: `http://localhost:8080/api/todos`
+  - Technology: Play 2
 
-####Single Page Application
-A rich Internet client application rendered at the browser side.
-- URL: `http://localhost:8080/spa`
-- Technology: Backbone.js on top of the above REST web service 
-- UI template: handlebars (at the browser side)
+- **Single Page Application** (spa), a rich Internet client rendered at the browser side.
+  - URL: `http://localhost:8080/spa`
+  - Technology: Backbone.js on top of the above REST web service 
+  - UI template: handlebars (at the browser side)
 
 ###ORM
 
@@ -53,7 +54,7 @@ To run the application
 
      mvn exec:exec -Dexec.executable=activator.bat -Dexec.args="run 8080"
 
-###Special Note on NetBeans Integration
+###Special Note on NetBeans 
 
 If you open the module as a Maven project in NetBeans, you can run NetBeans command Clean, Build, Run and Debug, leveraging NetBeans integration with Maven.
 
