@@ -45,7 +45,7 @@ All modules are implemented in Java 8, taking advantage of the Lambda expression
 ###Maven Integration
 
 The build system is Maven. Maven 3.2.2 or newer should be used. 
-Older versions of Maven can result in CDI linkage errors.
+Older versions of Maven can result in [CDI linkage errors](https://jira.codehaus.org/browse/MNG-5620?jql=project%20in%20(MAVEN%2C%20MNG)%20AND%20text%20~%20cdi).
 
 To build all sub-projects, run
 
